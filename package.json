@@ -1,0 +1,21 @@
+{
+  "name": "theFuronApi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Iago Silva Lima",
+  "license": "MIT",
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "mongoose": "^4.11.13"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.2",
+    "neutrino": "^6.2.0",
+    "neutrino-preset-node": "^6.2.0"
+  }
+}
