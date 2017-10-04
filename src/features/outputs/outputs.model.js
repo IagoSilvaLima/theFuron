@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 var outputsSchema = new mongoose.Schema({
     date : {
-        type : Date,
+        type : String,
+        required : true,
+    },
+    hour : {
+        type : String,
         required : true,
     },
     friend : {

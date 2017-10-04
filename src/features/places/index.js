@@ -12,6 +12,13 @@ router.get('/', (req,res)=>{
         })
 })
 
+router.get('/:id', (req,res)=>{
+    placesService.get(req.params.id)
+        .then(function(place){
+            return res.json(place);
+        })
+})
+
 router.post('/', (req,res) => {
     placesService.create(req.body)
         .then(function(place){

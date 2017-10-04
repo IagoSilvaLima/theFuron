@@ -9,6 +9,10 @@ export default class PlacesService{
         return this.places.find();
     }
 
+    get(id){
+        return this.places.findById(id);
+    }
+
     create(place){
         return new this.places(place).save();
     }

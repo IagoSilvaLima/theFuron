@@ -9,6 +9,10 @@ export default class FriendsService{
         return this.friends.find();
     }
 
+    get(id){
+        return this.friends.findById(id);
+    }
+
     create(friend){
         return new this.friends(friend).save();
     }
