@@ -18,7 +18,7 @@ export default class PlacesService{
     }
 
     update(id, place){
-        return this.places.findOneAndUpdate(id ,place);
+        return this.places.findByIdAndUpdate(id ,place);
     }
 
     remove(id) {

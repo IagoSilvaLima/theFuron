@@ -6,7 +6,7 @@ export default class FriendsService{
     }
 
     list(){
-        return this.friends.find();
+        return this.friends.find().exec();
     }
 
     get(id){
