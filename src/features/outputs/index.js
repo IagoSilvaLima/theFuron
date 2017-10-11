@@ -13,6 +13,14 @@ router.get('/', (req,res)=>{
     
 })
 
+router.get('/:id', (req,res)=>{
+    outputsService.get(req.params.id)
+        .then(function(output){
+            return res.json(output);
+        });
+    
+})
+
 router.post('/', (req, res)=>{
     outputsService.create(req.body)
         .then(function(friend){

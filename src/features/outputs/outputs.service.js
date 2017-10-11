@@ -17,6 +17,10 @@ export default class OutputsService{
         return this.outputs.findByIdAndUpdate(id, output);
     }
 
+    get(id){
+        return this.outputs.findById(id).populate('friend','name').populate('place','name');
+    }
+
     remove(id){
         return this.outputs.findByIdAndRemove(id)
     }
