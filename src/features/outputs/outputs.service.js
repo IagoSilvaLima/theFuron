@@ -21,6 +21,22 @@ export default class OutputsService{
         return this.outputs.findById(id).populate('friend','name').populate('place','name');
     }
 
+    cancel(id){
+        return this.get(id)
+            .then((output)=>{
+                output.canceled = true;
+                return this.update(output._id, output);
+            })
+    }
+
+    confirm(id){
+        return this.get(id)
+            .then((output)=>{
+                output.canceled = false;
+                return this.update(output._id, output);
+            })
+    }
+
     remove(id){
         return this.outputs.findByIdAndRemove(id)
     }

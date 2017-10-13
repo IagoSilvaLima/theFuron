@@ -18,8 +18,11 @@ var outputsSchema = new mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         required : true,
         ref : 'Places'
+    } ,
+    canceled : {
+        type : Boolean,
+        default : false
     }
-    ,pierced : Boolean
 })
 
 mongoose.model('Outputs', outputsSchema);

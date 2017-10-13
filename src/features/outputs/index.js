@@ -23,22 +23,37 @@ router.get('/:id', (req,res)=>{
 
 router.post('/', (req, res)=>{
     outputsService.create(req.body)
-        .then(function(friend){
-            return res.json(friend);
+        .then(function(output){
+            return res.json(output);
         })
 })
 
 router.put('/:id', (req,res)=>{
     outputsService.update(req.params.id, req.body)
-        .then(function(friend){
-            return res.json(friend)
+        .then(function(output){
+            return res.json(output)
+        })
+})
+
+router.put('/cancel/:id', (req,res)=>{
+    outputsService.cancel(req.params.id, req.body)
+        .then(function(output){
+            return res.json(output)
+        })
+})
+
+
+router.put('/confirm/:id', (req,res)=>{
+    outputsService.confirm(req.params.id, req.body)
+        .then(function(output){
+            return res.json(output)
         })
 })
 
 router.delete('/:id',(req,res)=>{
     outputsService.remove(req.params.id)
-        .then(function(friend){
-            return res.json(friend)
+        .then(function(output){
+            return res.json(output)
         })
 });
 
