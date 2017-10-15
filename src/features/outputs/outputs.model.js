@@ -2,18 +2,18 @@ import mongoose from 'mongoose';
 
 var outputsSchema = new mongoose.Schema({
     date : {
-        type : String,
+        type : Date,
         required : true,
     },
     hour : {
         type : String,
         required : true,
     },
-    friend : {
+    friends : [{
         type : mongoose.Schema.Types.ObjectId,
         required : true,
         ref : 'Friends'
-    },
+    }],
     place : {
         type : mongoose.Schema.Types.ObjectId,
         required : true,
