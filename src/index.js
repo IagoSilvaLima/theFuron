@@ -8,7 +8,7 @@ import outputs from './features/outputs';
 import charts from './features/charts';
 import './config/database'
 
-const port = 3000;
+const port = 5000;
 var app = express();
 
 app.use(cors());
